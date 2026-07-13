@@ -1,8 +1,8 @@
 import pygame
 import random
 import sys
-import os
 
+    
 # Initialize pygame
 pygame.init()
 pygame.mixer.init()
@@ -152,7 +152,6 @@ class Snake:
             self.body.pop()
         else:
             self.grow = False
-
     def check_collision(self):
         head = self.body[0]
         # Wall collision
@@ -411,12 +410,7 @@ def game_loop():
     screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
     pygame.display.set_caption("Snake Game")
 
-    pygame.mixer.init()
-    sounds = {
-        "eat": None,
-        "game_over": None,
-        "powerup": None,
-    }
+
 
     high_score = load_high_score()
     difficulty = "Medium"
